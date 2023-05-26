@@ -1,0 +1,22 @@
+PlayerOne = "Анна"
+PlayerTwo = "Алекс"
+ 
+AnnaScore = 0
+AlexScore = 0
+ 
+# У каждого кубика шесть возможных значений
+diceOne = [1, 2, 3, 4, 5, 6]
+diceTwo = [1, 2, 3, 4, 5, 6]
+ 
+def playDiceGame():
+    """Оба участника, Анна и Алекс, бросают кубик, используя метод shuffle"""
+ 
+    for i in range(5):
+        #оба кубика встряхиваются 5 раз
+        random.shuffle(diceOne)
+        random.shuffle(diceTwo)
+    firstNumber = random.choice(diceOne) # использование метода choice для выбора случайного значения
+    SecondNumber = random.choice(diceTwo)
+    return firstNumber + SecondNumber
+ 
+print("Игра в кости использует модуль random\n")
